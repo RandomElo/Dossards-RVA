@@ -1,0 +1,11 @@
+<%- include('./parties/tete.ejs',{titre: titre}) %>
+<h1>Vous êtes sur la page d'accueil</h1>
+<form>
+    <div class="mb-3">
+        <label for="codeAcces" class="form-label">Code d'accès :</label>
+        <input type="text" class="form-control w-25 ms-auto me-auto" id="codeAcces" placeholder="Saisir le code communiqué !" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Accéder</button>
+</form>
+<script src="/public/js/accueil.js"></script>
+<%- include('./parties/pied.ejs') %>
