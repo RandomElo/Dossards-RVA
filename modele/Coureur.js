@@ -18,6 +18,7 @@ export default function (bdd) {
         dossard_coureur: {
             type: DataTypes.STRING(10),
             allowNull: false,
+            unique: true,
         },
         sas_coureur: {
             type: DataTypes.STRING(10),

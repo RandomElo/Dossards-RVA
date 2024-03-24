@@ -1,11 +1,11 @@
-<%- include('./parties/tete.ejs',{titre: titre}) %>
-<h1>Vous êtes sur la page d'accueil</h1>
-<form>
-    <div class="mb-3">
-        <label for="codeAcces" class="form-label">Code d'accès :</label>
-        <input type="text" class="form-control w-25 ms-auto me-auto" id="codeAcces" placeholder="Saisir le code communiqué !" required />
+<%- include('./parties/tete.ejs',{ connexion:connexion}) %>
+<main class="text-center">
+    <h1 class="mt-2">Bienvenue sur la page d'accueil</h1>
+    <div id="divBouton" class="mt-3 d-flex flex-column justify-content-center w-25 ms-auto me-auto"> 
+        <a class="mb-2" href="http://localhost:1234/liste">Visualiser la liste</a>
+        <a href="http://localhost:1234/ajout">Ajoutez une personne </a>
     </div>
-    <button type="submit" class="btn btn-primary">Accéder</button>
-</form>
-<script src="/public/js/accueil.js"></script>
+
+</main>
+
 <%- include('./parties/pied.ejs') %>

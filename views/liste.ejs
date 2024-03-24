@@ -1,0 +1,18 @@
+<%- include('./parties/tete.ejs') %>
+<main class="text-center">
+    <h1 class="mt-2 mb-3">Voici la liste des dossards :</h1>
+    <div id="listeInscrits">
+        <% inscrits.forEach(coureur => { %>
+        <div class="coureur mb-2 p-3 border border-dark">
+            <p><span class="gras">Prénom :</span> <%= coureur.prenom_coureur %></p>
+            <p><span class="gras">Nom :</span> <%= coureur.nom_coureur %></p>
+            <p class="m-0 mb-2"><span class="gras">Dossard n° :</span> <%= coureur.dossard_coureur %></p>
+            <a class="bouton" data-dossard=<%= coureur.dossard_coureur %>>Copier le numéro de dossard</a>
+            <p class="mt-2"><span class="gras">SAS :</span> <%= coureur.sas_coureur %></p>
+        </div>
+        <% }) %>
+    </div>
+</main>
+<script src="/public/js/liste.js"></script>
+
+<%- include('./parties/pied.ejs') %>

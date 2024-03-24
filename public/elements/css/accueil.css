@@ -1,0 +1,11 @@
+#divBouton a {
+    text-decoration: none;
+    color: white;
+    background-color: #0048ff;
+    border: 1px solid #0048ff;
+    padding: 5px;
+}
+#divBouton a:hover {
+    color: #0048ff;
+    background-color: white;
+}

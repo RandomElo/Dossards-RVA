@@ -6,5 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
         favicon.href = "/public/img/favicon-light.ico";
     } else {
         favicon.href = "/public/img/favicon-dark.ico";
+        console.log('je suis en light mode')
     }
 });

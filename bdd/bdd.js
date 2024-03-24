@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize";
 import Coureur from "../modele/Coureur.js";
+import { fakerFR as faker } from "@faker-js/faker";
 
 //Création de l'instance Sequelize
 const sequelize = new Sequelize("bdd", process.env.BDD_UTILISATEUR, process.env.BDD_MDP, {
@@ -18,4 +19,18 @@ const bdd = {
     Coureur: Coureur(sequelize),
 };
 
+await sequelize.sync({ force: true });
+
+await bdd.Coureur.create({
+    prenom_coureur: "Eloi",
+    nom_coureur: "Random",
+    dossard_coureur: "1234",
+    sas_coureur: "3h15",
+});
+await bdd.Coureur.create({
+    prenom_coureur: "Pépita",
+    nom_coureur: "Random",
+    dossard_coureur: "2345",
+    sas_coureur: "4h",
+});
 export default bdd;

@@ -1,0 +1,24 @@
+<%- include('./parties/tete.ejs',{ connexion:connexion}) %>
+<main>
+    <h1 class="mt-2 mb-2 text-center">Bienvenue sur la page pour ajouter un participant</h1>
+        <form class="m-auto">
+            <div id="divPrenom">
+                <label for="inputPrenom">Prénom :</label>
+                <input id="inputPrenom" type="text">
+            </div>
+            <div id="divNom">
+                <label for="inputNom">Nom :</label>
+                <input id="inputNom" type="text">
+            </div>
+            <div id="divDossard">
+                <label for="inputDossard">Dossard n° :</label>
+                <input id="inputDossard" type="text">
+            </div>
+            <div id="divSAS">
+                <label for="inputSAS">SAS :</label>
+                <input id="inputSAS" type="text">
+            </div>
+        </form>
+</main>
+<script src="/public/js/ajout.js"></script>
+<%- include('./parties/pied.ejs') %>

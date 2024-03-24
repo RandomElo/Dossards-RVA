@@ -16,5 +16,17 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         body: JSON.stringify(donnees),
     });
     const data = await resultatRequete.json();
-    console.log(data);
+    if (data.error == null) {
+        //Alors la requete c'est bien effectuer
+        if (data.connecte) {
+            console.log("C'est la bon code");
+            window.location = "http://localhost:1234/liste";
+        } else {
+            console.log("Ce n'est pas la bon code");
+            //Afficher l'erreur
+        }
+    } else {
+        console.error(data.error);
+        console.log(data);
+    }
 });
