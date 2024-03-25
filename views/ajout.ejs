@@ -1,7 +1,7 @@
 <%- include('./parties/tete.ejs',{ connexion:connexion}) %>
 <main>
     <h1 class="mt-2 mb-2 text-center">Bienvenue sur la page pour ajouter un participant</h1>
-        <form class="m-auto">
+        <form>
             <div id="divPrenom">
                 <label for="inputPrenom">Prénom :</label>
                 <input id="inputPrenom" type="text">
@@ -12,12 +12,18 @@
             </div>
             <div id="divDossard">
                 <label for="inputDossard">Dossard n° :</label>
-                <input id="inputDossard" type="text">
+                <input id="inputDossard" type="number">
+            </div>	
+            <div id="disSAS">
+                <label for="selectSAS">SAS :</label>
+                <select id="selectSAS" required>
+                <option disabled selected>Sélectionner un SAS</option>
+                    <option value="3h00">3 h 00</option>
+                    <option value="5h00">5 h 00</option>
+                    <option value="6h00">6 h 00</option>
+                </select>
             </div>
-            <div id="divSAS">
-                <label for="inputSAS">SAS :</label>
-                <input id="inputSAS" type="text">
-            </div>
+            <button class="bouton mt-2" type="submit">Enregistrer</button>
         </form>
 </main>
 <script src="/public/js/ajout.js"></script>

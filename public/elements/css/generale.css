@@ -1,8 +1,20 @@
 *, ::before, ::after {
     margin: 0;
     padding: 0;
-    text-decoration: none;
 }
 nav {
     background-color: #0048ff;
+}
+.bouton {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    background-color: #0048ff;
+    border: 1px solid #0048ff;
+    border-radius: 10px;
+    padding: 7px;
+}
+.bouton:hover {
+    color: #0048ff;
+    background-color: white;
 }
