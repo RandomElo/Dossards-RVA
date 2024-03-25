@@ -19,7 +19,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     if (data.error == null) {
         //Alors la requete c'est bien effectuer
         if (data.connecte) {
-            window.location = "http://localhost:1234/liste";
+            window.location = "http://localhost:1234/";
         } else {
             console.log("Ce n'est pas la bon code");
             //Afficher une errue dans le form

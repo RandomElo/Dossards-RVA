@@ -1,6 +1,7 @@
 import express from "express";
 import coureur from "./coureurRouteur.js";
-import acces from "../controleurs/acces.js";
+import administration from "./administrationRouteur.js";
+import { accesVisiteurs, accesAdministrateur } from "../controleurs/acces.js";
 
 const routeur = express.Router();
 
@@ -9,8 +10,7 @@ routeur.get("/", async (req, res) => {
     if (req.cookies.connecte == process.env.CHAINE_COOKIE) {
         res.render("accueil.ejs", { titre: "Accueil", css: "accueil", connexion: req.cookies.connecte });
     } else {
-        console.log("Il est pas connecter");
-        res.render("connexion.ejs", { titre: "Connexion", css: "", connexion: req.cookies.connecte });
+        res.render("connexion.ejs", { titre: "Connexion", css: "", script: "connexion", connexion: req.cookies.connecte, h1: "Bienvenure sur la page de connexion" });
     }
 });
 routeur.get("/liste", async (req, res) => {
@@ -24,7 +24,12 @@ routeur.get("/liste", async (req, res) => {
 routeur.get("/ajout", (req, res) => {
     res.render("ajout.ejs", { titre: "Ajoutez un participant", css: "ajout", connexion: req.cookies.connecte });
 });
-routeur.use("/acces", acces);
+
+//Prévoir un routeur
+routeur.use("/acces", accesVisiteurs);
+routeur.use("/acces-administrateur", accesAdministrateur);
+
 routeur.use("/coureur", coureur);
+routeur.use("/administration", administration);
 
 export default routeur;

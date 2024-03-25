@@ -1,5 +1,4 @@
-import jwt from "jsonwebtoken";
-const acces = (req, res) => {
+export const accesVisiteurs = (req, res) => {
     const codeAcces = req.body.code;
     if (codeAcces == process.env.MDP_ACCES) {
         console.log("C'est le bon code");
@@ -17,4 +16,17 @@ const acces = (req, res) => {
         res.json({ connecte: false });
     }
 };
-export default acces;
+export const accesAdministrateur = (req, res) => {
+    if (req.body.code == process.env.CODE_ADMINISTRATEUR) {
+        console.log("Le code administrateur est correct");
+        res.cookie("administrateur", process.env.CHAINE_COOKIE_ADMINISTRATEUR, {
+            maxAge: 1000 * 60 * 60 * 24 * 2,
+            httpOnly: true,
+            sameSite: "strict",
+            // secure:true,
+        });
+        res.json({ connecte: true });
+    } else {
+        res.json({ connecte: false });
+    }
+};

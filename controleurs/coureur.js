@@ -1,15 +1,12 @@
 export const ajout = (req, res) => {
-    console.log("Je vient de rentrer dasn le middlewares");
-    console.log(req.body.prenom);
-
     req.Coureur.create({
-        prenom_coureur:req.body.prenom,
-        nom_coureur:req.body.nom,
-        dossard_coureur:req.body.dossard,
-        sas_coureur:req.body.sas,
-    })
-
-    res.json({ texte: "test" });
+        prenom_coureur: req.body.prenom,
+        nom_coureur: req.body.nom,
+        dossard_coureur: req.body.dossard,
+        sas_coureur: req.body.sas,
+    });
+    console.log("Donnée sauvegardé");
+    res.redirect(301, "http://localhost:1234/liste");
 };
 export const modification = (req, res) => {
     res.send("Je suis la modification");

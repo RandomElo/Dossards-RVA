@@ -18,8 +18,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     });
 
     if (requete.ok) {
-        const data = await requete.json();
-        console.log(data.texte);
+        window.location = "http://localhost:1234/liste";
     } else {
         console.error("La requête a échoué avec le statut :", requete.status);
     }
