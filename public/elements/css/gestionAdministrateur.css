@@ -1,0 +1,24 @@
+.gras {
+    font-weight: bold;
+}
+.coureur {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.boutonModifier {
+    background-color: rgb(28, 218, 79);
+    border-color: rgb(28, 218, 79);
+}
+.boutonModifier:hover {
+    color:rgb(28, 218, 79) ;
+    background-color: white;
+}
+.boutonSupprimer {
+    background-color: red;
+    border-color: red;
+}
+.boutonSupprimer:hover{
+    color: red;
+    background-color: white;
+}

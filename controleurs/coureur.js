@@ -1,4 +1,4 @@
-export const ajout = (req, res) => {
+const ajout = (req, res) => {
     req.Coureur.create({
         prenom_coureur: req.body.prenom,
         nom_coureur: req.body.nom,
@@ -8,10 +8,4 @@ export const ajout = (req, res) => {
     console.log("Donnée sauvegardé");
     res.redirect(301, "http://localhost:1234/liste");
 };
-export const modification = (req, res) => {
-    res.send("Je suis la modification");
-};
-
-export const suppression = (req, res) => {
-    res.send("Je suis la suppression");
-};
+export default ajout;

@@ -16,6 +16,7 @@ routeur.get("/", async (req, res) => {
 routeur.get("/liste", async (req, res) => {
     if (req.cookies.connecte == process.env.CHAINE_COOKIE) {
         const inscrits = await req.Coureur.findAll();
+        console.log(inscrits)
         res.render("liste.ejs", { titre: "Liste inscrits", inscrits, css: "liste", connexion: req.cookies.connecte });
     } else {
         res.redirect(301, "http://localhost:1234/");

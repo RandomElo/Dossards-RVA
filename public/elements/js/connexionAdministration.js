@@ -15,11 +15,11 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     });
     if (requete.ok) {
         const reponse = await requete.json();
-        
+
         if (reponse.connecte) {
-            console.log("C'est le bon code");
+            window.location.href = "http://localhost:1234/administration/gestion";
         } else {
-            window.location = "http://localhost:1234";
+            window.location.href = "http://localhost:1234";
         }
     } else {
         console.error("La requête a échoué avec le statut :", requete.status);

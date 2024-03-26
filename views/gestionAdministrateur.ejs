@@ -1,0 +1,21 @@
+<%- include('./parties/tete.ejs',{ connexion:connexion}) %>
+<main class="text-center">
+    <h1 class="mt-2 mb-2">Page de gestion</h1>
+    
+    <div id="listeInscrits">
+        <% inscrits.forEach(coureur => { %>
+        <div class="coureur mb-2 p-3 border border-dark" data-id=<%= coureur.id_coureur %>>
+            <p><span class="gras">Prénom :</span> <%= coureur.prenom_coureur %></p>
+            <p><span class="gras">Nom :</span> <%= coureur.nom_coureur %></p>
+            <p class="m-0 mb-2"><span class="gras">Dossard n° :</span> <%= coureur.dossard_coureur %></p>
+            <p class="mt-2"><span class="gras">SAS :</span> <%= coureur.sas_coureur %></p>
+            <div id="boutonsControle">
+                <a class="bouton boutonModifier">Modifier</a>
+                <a class="bouton boutonSupprimer">Supprimer</a>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</main>
+<script src="/public/js/gestionAdministration.js"></script>
+<%- include('./parties/pied.ejs') %>

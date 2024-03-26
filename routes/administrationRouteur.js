@@ -1,9 +1,11 @@
 import express from "express";
-import { administrationConnexion, administrationModification } from "../controleurs/administration.js";
+import { administrationRedirection, administrationConnexion, administrationGestion, administrationModification, administrationSuppression } from "../controleurs/administration.js";
 
 const administration = express.Router();
-
+administration.get("/", administrationRedirection);
 administration.get("/connexion", administrationConnexion);
-administration.get("/tableau", administrationModification);
+administration.get("/gestion", administrationGestion);
+administration.put("/modification", administrationModification);
+administration.delete("/suppression", administrationSuppression);
 
 export default administration;
