@@ -5,7 +5,6 @@ const ajout = (req, res) => {
         dossard_coureur: req.body.dossard,
         sas_coureur: req.body.sas,
     });
-    console.log("Donnée sauvegardé");
     res.redirect(301, "http://localhost:1234/liste");
 };
 export default ajout;

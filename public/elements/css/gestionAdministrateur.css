@@ -11,14 +11,42 @@
     border-color: rgb(28, 218, 79);
 }
 .boutonModifier:hover {
-    color:rgb(28, 218, 79) ;
+    color: rgb(28, 218, 79);
     background-color: white;
 }
 .boutonSupprimer {
     background-color: red;
     border-color: red;
 }
-.boutonSupprimer:hover{
+.boutonSupprimer:hover {
     color: red;
     background-color: white;
+}
+
+/* Mise en page du from de modification */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    margin: 10px;
+}
+
+input {
+    height: 22px;
+    text-align: left;
+    padding: 1px;
+}
+#selectSAS {
+    width: 191px;
+    text-align: left;
+    padding: 1px;
+}
+#envoiBouton {
+    margin-top: 10px;
 }

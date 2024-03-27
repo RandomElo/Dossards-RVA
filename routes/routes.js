@@ -6,7 +6,6 @@ import { accesVisiteurs, accesAdministrateur } from "../controleurs/acces.js";
 const routeur = express.Router();
 
 routeur.get("/", async (req, res) => {
-    // console.log(await req.Coureur.findAll());
     if (req.cookies.connecte == process.env.CHAINE_COOKIE) {
         res.render("accueil.ejs", { titre: "Accueil", css: "accueil", connexion: req.cookies.connecte });
     } else {
@@ -16,7 +15,6 @@ routeur.get("/", async (req, res) => {
 routeur.get("/liste", async (req, res) => {
     if (req.cookies.connecte == process.env.CHAINE_COOKIE) {
         const inscrits = await req.Coureur.findAll();
-        console.log(inscrits)
         res.render("liste.ejs", { titre: "Liste inscrits", inscrits, css: "liste", connexion: req.cookies.connecte });
     } else {
         res.redirect(301, "http://localhost:1234/");

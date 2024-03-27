@@ -2,30 +2,24 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     console.log("Le formulaire vient d'être cliquer");
     e.preventDefault();
     const valeurInput = e.target[0].value;
-    console.log("Valeur de l'input : " + valeurInput);
-
     const donnees = {
         code: valeurInput,
     };
-
-    const resultatRequete = await fetch("http://localhost:1234/acces", {
+    const requete = await fetch("http://localhost:1234/acces", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(donnees),
     });
-    const data = await resultatRequete.json();
-    if (data.error == null) {
-        //Alors la requete c'est bien effectuer
-        if (data.connecte) {
+    if (requete.ok) {
+        const resultat = await requete.json();
+        if (resultat.connecte) {
             window.location = "http://localhost:1234/";
         } else {
-            console.log("Ce n'est pas la bon code");
-            //Afficher une errue dans le form
+            console.log("Ce n'est pas le bon code d'accès");
         }
     } else {
-        console.error(data.error);
-        console.log(data);
+        console.error("La requête a échoué avec le statut :", requete.status);
     }
 });

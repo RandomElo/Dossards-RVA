@@ -8,7 +8,6 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         dossard: form[2].value,
         sas: form[3].value,
     };
-    console.log(donnees);
     const requete = await fetch("http://localhost:1234/coureur/ajout", {
         method: "POST",
         headers: {

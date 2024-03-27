@@ -2,7 +2,7 @@
 <main class="text-center">
     <h1 class="mt-2 mb-2">Page de gestion</h1>
     
-    <div id="listeInscrits">
+    <div id="divResultat">
         <% inscrits.forEach(coureur => { %>
         <div class="coureur mb-2 p-3 border border-dark" data-id=<%= coureur.id_coureur %>>
             <p><span class="gras">Prénom :</span> <%= coureur.prenom_coureur %></p>
