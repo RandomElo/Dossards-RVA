@@ -10,7 +10,7 @@ import { accesibiliteBDD } from "./middleware/accesibiliteBDD.js";
 
 dotenv.config();
 
-const port = 1234;
+const port = 8100;
 const app = express();
 
 //Définition du CORS
