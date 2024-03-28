@@ -3,7 +3,7 @@ export const administrationRedirection = (req, res) => {
         if (req.cookies.administrateur == process.env.CHAINE_COOKIE_ADMINISTRATEUR) {
             res.redirect(301, `https://eloi2.alwaysdata.net/administration/gestion`);
         } else if (!req.cookies.administrateur) {
-            res.redirect(301, `https://eloi2.alwaysdata.net/connexion`);
+            res.redirect(301, `https://eloi2.alwaysdata.net/administration/connexion`);
         }
     } else {
         res.clearCookie("connecte");
