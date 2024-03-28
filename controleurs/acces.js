@@ -1,6 +1,4 @@
 export const accesVisiteurs = (req, res) => {
-    console.log(req.body.code)
-    console.log(process.env.MDP_ACCES)
     if (req.body.code == process.env.MDP_ACCES) {
         //Génération du cookie
         res.cookie("connecte", process.env.CHAINE_COOKIE, {
