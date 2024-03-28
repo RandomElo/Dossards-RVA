@@ -34,7 +34,7 @@ a {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 10px 30px;
 }
 .navbar .logo {
     font-size: 1.2em;
