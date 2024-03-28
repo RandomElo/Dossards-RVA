@@ -29,7 +29,7 @@ input {
         display: flex;
         flex-direction: column;
     }
-    .divFrom > label {
+    .divForm > label {
         width: auto;
         margin-left: auto;
         margin-right: auto;
