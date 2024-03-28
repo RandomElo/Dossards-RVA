@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import coureur from "./coureurRouteur.js";
 import administration from "./administrationRouteur.js";
 import { accesVisiteurs, accesAdministrateur } from "../controleurs/acces.js";
@@ -23,7 +24,9 @@ routeur.get("/liste", async (req, res) => {
 routeur.get("/ajout", (req, res) => {
     res.render("ajout.ejs", { titre: "Ajoutez un participant", css: "ajout", connexion: req.cookies.connecte });
 });
-
+routeur.get("/robots.txt", (req, res) => {
+    res.sendFile(path.join("C:", "Users", "eloir", "Documents", "Programmation", "__Projets", "Dossards RVA", "robots.txt"));
+});
 //Prévoir un routeur
 routeur.use("/acces", accesVisiteurs);
 routeur.use("/acces-administrateur", accesAdministrateur);

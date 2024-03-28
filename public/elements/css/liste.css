@@ -6,3 +6,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+#boutonMasquerTrieSAS,
+#supprimerFiltre {
+    background-color: red;
+    border-color: red;
+}
+#boutonMasquerTrieSAS:hover,
+#supprimerFiltre:hover {
+    color: red;
+    background-color: white;
+}

@@ -1,6 +1,5 @@
 export const accesVisiteurs = (req, res) => {
-    const codeAcces = req.body.code;
-    if (codeAcces == process.env.MDP_ACCES) {
+    if (req.body.code == process.env.MDP_ACCES) {
         //Génération du cookie
         res.cookie("connecte", process.env.CHAINE_COOKIE, {
             maxAge: 1000 * 60 * 60 * 24 * 7, //Cookie dispo pendant un semaine

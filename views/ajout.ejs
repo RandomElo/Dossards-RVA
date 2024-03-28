@@ -1,4 +1,4 @@
-<%- include('./parties/tete.ejs',{ connexion:connexion}) %>
+<%- include('./parties/tete.ejs') %>
 <main>
     <h1 class="mt-2 mb-2 text-center">Bienvenue sur la page pour ajouter un participant</h1>
         <form>
@@ -18,12 +18,12 @@
                 <label for="selectSAS">SAS :</label>
                 <select id="selectSAS" required>
                 <option disabled selected>Sélectionner un SAS</option>
-                    <option value="3h15">3 h 15</option>
-                    <option value="3h30">3 h 30</option>
-                    <option value="3h45">3 h 45</option>
-                    <option value="4h">4 h 00</option>
-                    <option value="4h15">4 h 15</option>
-                    <option value="4h30">4 h 30</option>
+                    <option value="3 h 15">3 h 15</option>
+                    <option value="3 h 30">3 h 30</option>
+                    <option value="3 h 45">3 h 45</option>
+                    <option value="4 h">4 h 00</option>
+                    <option value="4 h 15">4 h 15</option>
+                    <option value="4 h 30">4 h 30</option>
                 </select>
             </div>
             <button class="bouton mt-2" type="submit">Enregistrer</button>

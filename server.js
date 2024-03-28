@@ -32,6 +32,7 @@ app.use("/", routeur);
 //Route qui est appeller si al requete 'nest pas définis par l'appli
 app.all("*", (req, res) => {
     //Utiliser une vue
+    console.log(`Url de la requête : ${req.originalUrl}`);
     res.status(404).send("Ressource inexistante");
 });
 

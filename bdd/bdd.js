@@ -20,17 +20,54 @@ const bdd = {
 };
 
 await sequelize.sync({ force: true });
-
+///SAS 3h15
 await bdd.Coureur.create({
     prenom_coureur: "Eloi",
     nom_coureur: "Random",
-    dossard_coureur: "1234",
-    sas_coureur: "3h15",
+    dossard_coureur: "1111",
+    sas_coureur: "3 h 15",
 });
 await bdd.Coureur.create({
-    prenom_coureur: "Pépita",
+    prenom_coureur: "Eloi",
     nom_coureur: "Random",
-    dossard_coureur: "2345",
-    sas_coureur: "4h",
+    dossard_coureur: "1222",
+    sas_coureur: "3 h 15",
+});
+await bdd.Coureur.create({
+    prenom_coureur: "Eloi",
+    nom_coureur: "Random",
+    dossard_coureur: "1333",
+    sas_coureur: "3 h 15",
+});
+//Fin de la génération 3h15
+await bdd.Coureur.create({
+    prenom_coureur: "Eloi",
+    nom_coureur: "Random",
+    dossard_coureur: "2222",
+    sas_coureur: "3 h 30",
+});
+await bdd.Coureur.create({
+    prenom_coureur: "Eloi",
+    nom_coureur: "Random",
+    dossard_coureur: "3333",
+    sas_coureur: "3 h 45",
+});
+await bdd.Coureur.create({
+    prenom_coureur: "Eloi",
+    nom_coureur: "Random",
+    dossard_coureur: "4444",
+    sas_coureur: "4 h",
+});
+await bdd.Coureur.create({
+    prenom_coureur: "Eloi",
+    nom_coureur: "Random",
+    dossard_coureur: "5555",
+    sas_coureur: "4 h 15",
+});
+await bdd.Coureur.create({
+    prenom_coureur: "Eloi",
+    nom_coureur: "Random",
+    dossard_coureur: "6666",
+    sas_coureur: "4 h 30",
 });
 export default bdd;
