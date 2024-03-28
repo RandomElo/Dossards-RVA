@@ -14,22 +14,17 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand text-white ms-2" href="https://eloi2.alwaysdata.net/">Dossards</a>
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <% if(connexion == process.env.CHAINE_COOKIE) {%>
-                <div class="collapse navbar-collapse" id="menu">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="https://eloi2.alwaysdata.net/liste" class="nav-link text-white ms-3">Liste</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://eloi2.alwaysdata.net/ajout" class="nav-link text-white ms-3">Ajout</a>
-                        </li>
-                    </ul>
-                </div>
-                <% } %>
+            <nav class="navbar">
+                <a class='logo' href="https://eloi2.alwaysdata.net/">PépitoCoin</a>
+                    <% if(connexion == process.env.CHAINE_COOKIE) {%>
+                        <div class="navLinks">
+                            <ul>
+                                <li><a href="#">Accueil</a></li>
+                                <li><a href="#">Liste</a></li>
+                                <li><a href="#">Ajout</a></li>
+                            </ul>
+                        </div>
+                    <% } %>
+                <img id="imageHamburger" class="menuHamburger" src="https://zupimages.net/up/22/37/dzf7.png" alt="Menu Hamburger">
             </nav>
         </header>

@@ -1,4 +1,6 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
 }
@@ -17,4 +19,85 @@ nav {
 .bouton:hover {
     color: #0048ff;
     background-color: white;
+}
+/* Gestion navbar */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+header {
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.navbar .logo {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.navLinks.mobile-menu {
+    margin-left: 0;
+}
+.navbar a {
+    color: red;
+    border: 1px solid blue;
+}
+.navbar a:hover {
+    border: 1px solid white;
+}
+.navbar .navLinks ul {
+    display: flex;
+}
+.navbar .navLinks ul li {
+    margin: 0 20px;
+}
+.navbar .menuHamburger {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+}
+@media screen and (max-width: 850px) {
+    .navbar {
+        padding: 0;
+    }
+    .navbar .menuHamburger {
+        display: block;
+    }
+    .navbar .logo {
+        color: purple;
+    }
+    .navLinks {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: yellow;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .navLinks ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar .navLinks ul li {
+        margin: 20px 0;
+    }
+    .navbar .navLinks ul li {
+        margin: 20px 0;
+        font-size: 1.2em;
+    }
 }
