@@ -61,7 +61,7 @@ a {
 }
 @media screen and (max-width: 850px) {
     .navbar {
-        padding: 0;
+        padding: 10px;
     }
     .navbar .menuHamburger {
         display: block;
