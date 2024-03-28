@@ -57,11 +57,11 @@ a {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 35px;
+    width: 45px;
 }
 @media screen and (max-width: 850px) {
     .navbar {
-        padding: 10px;
+        padding: 15px;
     }
     .navbar .menuHamburger {
         display: block;
