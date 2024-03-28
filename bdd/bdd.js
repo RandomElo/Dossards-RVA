@@ -18,4 +18,14 @@ const bdd = {
     sequelize,
     Coureur: Coureur(sequelize),
 };
+
+await sequelize.sync({ force: true });
+///SAS 3h15
+await bdd.Coureur.create({
+    prenom_coureur: "Element",
+    nom_coureur: "Dev",
+    dossard_coureur: "1111",
+    sas_coureur: "3 h 15",
+});
+
 export default bdd;
