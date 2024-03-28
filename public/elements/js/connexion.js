@@ -5,7 +5,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     const donnees = {
         code: valeurInput,
     };
-    const requete = await fetch(`https://eloi2.alwaysdata.net//acces`, {
+    const requete = await fetch(`https://eloi2.alwaysdata.net/acces`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
