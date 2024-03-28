@@ -23,7 +23,7 @@ function afficherTrie() {
             const donnee = {
                 sas: e.target.dataset.sas,
             };
-            const requete = await fetch("http://localhost:1234/coureur/trie-sas", {
+            const requete = await fetch(`https://eloi2.alwaysdata.net/coureur/trie-sas`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -36,7 +36,7 @@ document.querySelectorAll(".boutonModifier").forEach((bouton) => {
             };
 
             // Gestion de l'url
-            const requete = await fetch("http://localhost:1234/administration/modification", {
+            const requete = await fetch(`https://eloi2.alwaysdata.net/administration/modification`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -50,7 +50,7 @@ document.querySelectorAll(".boutonModifier").forEach((bouton) => {
                 if (reponse.modification) {
                     location.reload(true); //Permet de reload la page sans utiliser le cache
                 } else {
-                    window.location.href = "http://localhost:1234/";
+                    window.location.href = `https://eloi2.alwaysdata.net`;
                 }
             } else {
                 console.error("La requête a échoué avec le statut :", requete.status);
@@ -64,7 +64,7 @@ document.querySelectorAll(".boutonSupprimer").forEach((bouton) => {
             id: e.target.parentNode.parentNode.dataset.id,
         };
 
-        const requete = await fetch("http://localhost:1234/administration/suppression", {
+        const requete = await fetch(`https://eloi2.alwaysdata.net/administration/suppression`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -78,7 +78,7 @@ document.querySelectorAll(".boutonSupprimer").forEach((bouton) => {
             if (reponse.suppression) {
                 location.reload(true); //Permet de reload la page sans utiliser le cache
             } else {
-                window.location.href = "http://localhost:1234/";
+                window.location.href = `https://eloi2.alwaysdata.net`;
             }
         } else {
             console.error("La requête a échoué avec le statut :", requete.status);

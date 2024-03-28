@@ -8,6 +8,8 @@ const routeur = express.Router();
 
 routeur.get("/", async (req, res) => {
     if (req.cookies.connecte == process.env.CHAINE_COOKIE) {
+        console.log(req.cookies.connecte);
+        console.log(process.env.CHAINE_COOKIE);
         res.render("accueil.ejs", { titre: "Accueil", css: "accueil", connexion: req.cookies.connecte });
     } else {
         res.render("connexion.ejs", { titre: "Connexion", css: "", script: "connexion", connexion: req.cookies.connecte, h1: "Bienvenure sur la page de connexion" });
@@ -18,7 +20,7 @@ routeur.get("/liste", async (req, res) => {
         const inscrits = await req.Coureur.findAll();
         res.render("liste.ejs", { titre: "Liste inscrits", inscrits, css: "liste", connexion: req.cookies.connecte });
     } else {
-        res.redirect(301, "http://localhost:1234/");
+        res.redirect(301, `https://eloi2.alwaysdata.net`);
     }
 });
 routeur.get("/ajout", (req, res) => {

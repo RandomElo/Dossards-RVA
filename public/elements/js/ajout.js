@@ -8,7 +8,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         dossard: form[2].value,
         sas: form[3].value,
     };
-    const requete = await fetch("http://localhost:1234/coureur/ajout", {
+    const requete = await fetch(`https://eloi2.alwaysdata.net/coureur/ajout`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -17,7 +17,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     });
 
     if (requete.ok) {
-        window.location = "http://localhost:1234/liste";
+        window.location = `https://eloi2.alwaysdata.net/liste`;
     } else {
         console.error("La requête a échoué avec le statut :", requete.status);
     }

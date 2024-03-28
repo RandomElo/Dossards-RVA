@@ -5,7 +5,7 @@ export const ajout = (req, res) => {
         dossard_coureur: req.body.dossard,
         sas_coureur: req.body.sas,
     });
-    res.redirect(301, "http://localhost:1234/liste");
+    res.redirect(301, `https://eloi2.alwaysdata.net/liste`);
 };
 export const trieSAS = (req, res) => {
     req.Coureur.findAll({

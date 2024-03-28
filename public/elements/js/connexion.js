@@ -5,7 +5,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     const donnees = {
         code: valeurInput,
     };
-    const requete = await fetch("http://localhost:1234/acces", {
+    const requete = await fetch(`https://eloi2.alwaysdata.net//acces`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -15,7 +15,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     if (requete.ok) {
         const resultat = await requete.json();
         if (resultat.connecte) {
-            window.location = "http://localhost:1234/";
+            window.location.href = `https://eloi2.alwaysdata.net/`;
         } else {
             console.log("Ce n'est pas le bon code d'accès");
         }

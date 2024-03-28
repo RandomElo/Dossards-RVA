@@ -6,7 +6,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         code: valeur,
     };
 
-    const requete = await fetch("http://localhost:1234/acces-administrateur", {
+    const requete = await fetch(`https://eloi2.alwaysdata.net/acces-administrateur`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -17,9 +17,9 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         const reponse = await requete.json();
 
         if (reponse.connecte) {
-            window.location.href = "http://localhost:1234/administration/gestion";
+            window.location.href = `https://eloi2.alwaysdata.net/administration/gestion`;
         } else {
-            window.location.href = "http://localhost:1234";
+            window.location.href = `https://eloi2.alwaysdata.net`;
         }
     } else {
         console.error("La requête a échoué avec le statut :", requete.status);
