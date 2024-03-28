@@ -4,11 +4,16 @@
     background-color: #0048ff;
     border: 1px solid #0048ff;
     padding: 5px;
-    width: 20%;
+    width: 15%;
     margin-right: auto;
     margin-left: auto;
 }
 #divBouton a:hover {
     color: #0048ff;
     background-color: white;
+}
+@media screen and (max-width: 850px) {
+    #divBouton a {
+        width: 40%;
+    }
 }
