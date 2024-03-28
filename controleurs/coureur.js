@@ -14,9 +14,6 @@ export const trieSAS = (req, res) => {
         },
     })
         .then((coureurs) => {
-            console.log("Données BDD")
-            console.log(coureurs)
-            console.log("***********************")
             res.json({ achever: true, coureurs });
         })
         .catch((error) => {
