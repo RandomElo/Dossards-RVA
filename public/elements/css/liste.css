@@ -2,7 +2,7 @@
     font-weight: bold;
 }
 .coureur {
-    width: 40%;
+    width: 15%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -15,4 +15,9 @@
 #supprimerFiltre:hover {
     color: red;
     background-color: white;
+}
+@media screen and (max-width: 850px) {
+    .coureur {
+        width: 15%;
+    }
 }
