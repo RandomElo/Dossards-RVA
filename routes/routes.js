@@ -12,7 +12,7 @@ routeur.get("/", async (req, res) => {
         console.log(process.env.CHAINE_COOKIE);
         res.render("accueil.ejs", { titre: "Accueil", css: "accueil", connexion: req.cookies.connecte });
     } else {
-        res.render("connexion.ejs", { titre: "Connexion", css: "", script: "connexion", connexion: req.cookies.connecte, h1: "Bienvenure sur la page de connexion" });
+        res.render("connexion.ejs", { titre: "Connexion", css: "", script: "connexion", connexion: req.cookies.connecte, h1: "Bienvenue sur la page de connexion" });
     }
 });
 routeur.get("/liste", async (req, res) => {
