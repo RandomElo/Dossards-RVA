@@ -4,6 +4,9 @@
     background-color: #0048ff;
     border: 1px solid #0048ff;
     padding: 5px;
+    width: 20%;
+    margin-right: auto;
+    margin-left: auto;
 }
 #divBouton a:hover {
     color: #0048ff;
