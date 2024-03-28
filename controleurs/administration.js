@@ -12,7 +12,7 @@ export const administrationRedirection = (req, res) => {
 };
 export const administrationConnexion = (req, res) => {
     if (req.cookies.connecte == process.env.CHAINE_COOKIE) {
-        res.render("connexion.ejs", { titre: "Administration", css: "connexionAdministration", script: "connexionAdministration", connexion: req.cookies.connecte, h1: "Page de connexion administrateur" });
+        res.render("connexion.ejs", { titre: "Administration", css: "", script: "connexionAdministration", connexion: req.cookies.connecte, h1: "Page de connexion administrateur" });
     } else {
         res.redirect(301, `https://eloi2.alwaysdata.net`);
     }

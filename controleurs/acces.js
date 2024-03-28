@@ -5,7 +5,7 @@ export const accesVisiteurs = (req, res) => {
             maxAge: 1000 * 60 * 60 * 24 * 7, //Cookie dispo pendant un semaine
             httpOnly: true,
             sameSite: "strict",
-            // secure:true, A utiliser quand je serias sur le site finale
+            secure:true,
         });
         //Je renvoie le faite que c le bon code
         res.json({ connecte: true });
@@ -20,7 +20,7 @@ export const accesAdministrateur = (req, res) => {
             maxAge: 1000 * 60 * 60 * 24 * 2,
             httpOnly: true,
             sameSite: "strict",
-            // secure:true,
+            secure:true,
         });
         res.json({ connecte: true });
     } else {
