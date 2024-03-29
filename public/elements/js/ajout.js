@@ -8,9 +8,8 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         dossard: form[2].value,
         sas: form[3].value,
     };
-    if (form[0].value == "" || form[1].value == "" || form[2].value == "" || form[3].value == "") {
-        console.log("Un des éléments est vide");
-        document.querySelector('#divMessageErreur').innerHTML = /*html*/`<p id="messageErreur" class='m-0'>Merci de remplir correctement tous les champs</p>`
+    if (form[0].value == "" || form[1].value == "" || form[2].value == "" || form[3].value == "" || form[3].value == "Sélectionner un SAS") {
+        document.querySelector("#divMessageErreur").innerHTML = /*html*/ `<p id="messageErreur" class='m-0'>Merci de remplir correctement tous les champs</p>`;
     } else {
         const requete = await fetch(`https://eloi2.alwaysdata.net/coureur/ajout`, {
             method: "POST",
