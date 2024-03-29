@@ -20,4 +20,12 @@
     .coureur {
         width: 75%;
     }
+    #divTrieSAS {
+        display:flex;
+        flex-direction:column;
+    }
+    #divTrieSAS > a {
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;
 }
