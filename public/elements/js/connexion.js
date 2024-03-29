@@ -1,5 +1,4 @@
 document.querySelector("form").addEventListener("submit", async (e) => {
-    console.log("Le formulaire vient d'être cliquer");
     e.preventDefault();
     const valeurInput = e.target[0].value;
     const donnees = {
@@ -17,7 +16,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         if (resultat.connecte) {
             window.location.href = `https://eloi2.alwaysdata.net/`;
         } else {
-            console.log("Ce n'est pas le bon code d'accès");
+            document.querySelector('#divErreur').innerHTML = /*html*/`<p id='messageErreur'>Le code est incorrect</p>`
         }
     } else {
         console.error("La requête a échoué avec le statut :", requete.status);

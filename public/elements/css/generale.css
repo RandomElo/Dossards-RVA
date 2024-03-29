@@ -20,6 +20,9 @@ nav {
     color: #0048ff;
     background-color: white;
 }
+#messageErreur {
+    color: red;
+}
 /* Gestion navbar */
 * {
     margin: 0;
