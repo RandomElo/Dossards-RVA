@@ -24,6 +24,7 @@ app.use(
 );
 app.use(express.json()); //Permet de récuéprer les données présentes dans les requêtes
 app.use("/public", express.static(path.join(process.cwd(), "public/elements"))); //Permet de servir à l'adress /public les données présentes dasn /public/élement
+app.use("/", express.static(path.join(process.cwd(), "public")));
 app.set("view engine", "ejs");
 app.use(cookieParser());
 app.use(accesibiliteBDD(bdd));
