@@ -8,17 +8,22 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         dossard: form[2].value,
         sas: form[3].value,
     };
-    const requete = await fetch(`https://eloi2.alwaysdata.net/coureur/ajout`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(donnees),
-    });
-
-    if (requete.ok) {
-        window.location = `https://eloi2.alwaysdata.net/liste`;
+    if (form[0].value == "" || form[1].value == "" || form[2].value == "" || form[3].value == "") {
+        console.log("Un des éléments est vide");
+        document.querySelector('#divMessageErreur').innerHTML = /*html*/`<p id="messageErreur" class='m-0'>Merci de remplir correctement tous les champs</p>`
     } else {
-        console.error("La requête a échoué avec le statut :", requete.status);
+        const requete = await fetch(`https://eloi2.alwaysdata.net/coureur/ajout`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(donnees),
+        });
+
+        if (requete.ok) {
+            window.location = `https://eloi2.alwaysdata.net/liste`;
+        } else {
+            console.error("La requête a échoué avec le statut :", requete.status);
+        }
     }
 });
