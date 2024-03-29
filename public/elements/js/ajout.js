@@ -4,7 +4,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
     const donnees = {
         prenom: form[0].value,
-        nom: form[1].value,
+        nom: form[1].value.toUpperCase(),
         dossard: form[2].value,
         sas: form[3].value,
     };
